@@ -3,7 +3,7 @@
  * Plugin Name: WooCommerce Filter Orders by Product
  * Plugin URI: http://kowsarhossain.com/
  * Description: This plugin lets you filter the WooCommrce Orders by any specific product
- * Version: 2.0.0
+ * Version: 2.0.1
  * Author: Md. Kowsar Hossain
  * Author URI: http://kowsarhossain.com
  * Text Domain: foa
@@ -14,7 +14,7 @@
 
 if ( ! defined( 'WPINC' ) ) die;
 
-if ( !in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) && !is_admin() ){
+if ( !in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) || !is_admin() ){
 	return;
 }
 
