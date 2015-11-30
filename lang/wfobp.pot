@@ -2,10 +2,12 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: WP Filter Orders by Product\n"
+"Project-Id-Version: WooCommerce Filter Orders by Product\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Sat Aug 08 2015 00:55:16 GMT+0600 (Azores Standard Time)\n"
-"POT-Revision-Date: Sat Aug 08 2015 00:55:22 GMT+0600 (Azores Standard Time)\n"
+"POT-Creation-Date: Mon Nov 30 2015 19:51:51 GMT+0600 (Central Asia Standard "
+"Time)\n"
+"POT-Revision-Date: Mon Nov 30 2015 19:51:56 GMT+0600 (Central Asia Standard "
+"Time)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -24,6 +26,10 @@ msgstr ""
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Generator: Loco - https://localise.biz/"
 
-#: /filter-orders-by-product.php:36
+#: /woocommerce-filter-orders-by-product.php:59
 msgid "All products"
+msgstr ""
+
+#: /woocommerce-filter-orders-by-product.php:79
+msgid "Search..."
 msgstr ""

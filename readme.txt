@@ -3,7 +3,7 @@ Contributors: kowsar89
 Tags: woocommerce, filter, order, product, admin
 Requires at least: 3.0.1
 Tested up to: 4.3.1
-Stable tag: 2.0.1
+Stable tag: 2.0.2
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -34,3 +34,6 @@ You will see a new filter appears in WooCommerce Orders page.
 
 = 2.0.1 =
 * Fixed a minor bug
+
+= 2.0.2 =
+* Fixed translation bug (Thanks to Kasperta)
