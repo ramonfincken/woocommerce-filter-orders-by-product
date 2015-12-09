@@ -3,10 +3,10 @@
  * Plugin Name: WooCommerce Filter Orders by Product
  * Plugin URI: http://kowsarhossain.com/
  * Description: This plugin lets you filter the WooCommrce Orders by any specific product
- * Version: 2.0.2
+ * Version: 2.0.3
  * Author: Md. Kowsar Hossain
  * Author URI: http://kowsarhossain.com
- * Text Domain: wfobp
+ * Text Domain: woocommerce-filter-orders-by-product
  * License: GNU General Public License v3.0
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  *
@@ -27,7 +27,7 @@ class FOA_Woo_Filter_Orders_by_Product{
 		add_action( 'restrict_manage_posts', array( $this, 'product_filter_in_order' ), 50  );
 		add_action( 'posts_where', array( $this, 'product_filter_where' ));
 		add_action( 'admin_enqueue_scripts', array( $this, 'scripts_and_styles' ));
-		load_plugin_textdomain( 'wfobp', false, dirname( plugin_basename(__FILE__) ) . '/lang/' );
+		load_plugin_textdomain( 'woocommerce-filter-orders-by-product', false, dirname( plugin_basename(__FILE__) ) . '/languages/' );
 	}
 
 	public static function instance() {
@@ -56,7 +56,7 @@ class FOA_Woo_Filter_Orders_by_Product{
 	    ?>
 	    <span id="foa_order_product_filter_wrap">
 		    <select name="foa_order_product_filter" id="foa_order_product_filter">
-		    <option value=""><?php _e('All products', 'wfobp'); ?></option>
+		    <option value=""><?php _e('All products', 'woocommerce-filter-orders-by-product'); ?></option>
 		    <?php
 		        $current_v = isset($_GET['foa_order_product_filter'])? $_GET['foa_order_product_filter']:'';
 		        foreach ($values as $label => $value) {
@@ -76,7 +76,7 @@ class FOA_Woo_Filter_Orders_by_Product{
 		    		<span class="fuzzArrow"></span>
 		    	</div>
 		    	<div id="fuzzDropdownContainer">
-		    		<input type="text" value="" class="fuzzMagicBox" placeholder="<?php _e('Search...', 'wfobp'); ?>" />
+		    		<input type="text" value="" class="fuzzMagicBox" placeholder="<?php _e('Search...', 'woocommerce-filter-orders-by-product'); ?>" />
 		    		<ul id="fuzzResults">
 		    		</ul>
 		    	</div>

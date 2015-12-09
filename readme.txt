@@ -3,7 +3,7 @@ Contributors: kowsar89
 Tags: woocommerce, filter, order, product, admin
 Requires at least: 3.0.1
 Tested up to: 4.3.1
-Stable tag: 2.0.2
+Stable tag: 2.0.3
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -25,15 +25,19 @@ You will see a new filter appears in WooCommerce Orders page.
 2. Click on that dropdown and you'll see a list of all products. Select a product and click on "Filter" button. Results will display only the orders which contains that specific product.
 
 == Changelog ==
-= 1.0.0 =
-* Initial release
 
-= 2.0.0 =
-* Fixed a major bug
-* Implemented search dropdown
+= 2.0.3 =
+* Fix: Language
+
+= 2.0.2 =
+* Fixed translation bug (Thanks to Kasperta)
 
 = 2.0.1 =
 * Fixed a minor bug
 
-= 2.0.2 =
-* Fixed translation bug (Thanks to Kasperta)
+= 2.0.0 =
+* New: search dropdown
+* Fixed a major bug
+
+= 1.0.0 =
+* Initial release
