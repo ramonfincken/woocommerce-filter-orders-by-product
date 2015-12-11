@@ -3,7 +3,7 @@
  * Plugin Name: WooCommerce Filter Orders by Product
  * Plugin URI: http://kowsarhossain.com/
  * Description: This plugin lets you filter the WooCommrce Orders by any specific product
- * Version: 2.0.3
+ * Version: 2.0.4
  * Author: Md. Kowsar Hossain
  * Author URI: http://kowsarhossain.com
  * Text Domain: woocommerce-filter-orders-by-product
@@ -14,20 +14,17 @@
 
 if ( ! defined( 'WPINC' ) ) die;
 
-if ( !in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) || !is_admin() ){
-	return;
-}
-
-add_action( 'plugins_loaded', array( 'FOA_Woo_Filter_Orders_by_Product', 'instance' ) );
-
 class FOA_Woo_Filter_Orders_by_Product{
 	private static $instance = null;
 
 	private function __construct() {
+		if ( !in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) || !is_admin() ){
+			return;
+		}
+		add_action( 'init', array( $this, 'load_textdomain' ) );
 		add_action( 'restrict_manage_posts', array( $this, 'product_filter_in_order' ), 50  );
 		add_action( 'posts_where', array( $this, 'product_filter_where' ));
 		add_action( 'admin_enqueue_scripts', array( $this, 'scripts_and_styles' ));
-		load_plugin_textdomain( 'woocommerce-filter-orders-by-product', false, dirname( plugin_basename(__FILE__) ) . '/languages/' );
 	}
 
 	public static function instance() {
@@ -36,6 +33,11 @@ class FOA_Woo_Filter_Orders_by_Product{
 		}
 		return self::$instance;
 	}
+
+    // Textdomain
+    public function load_textdomain(){
+        load_plugin_textdomain( 'woocommerce-filter-orders-by-product', false, dirname( plugin_basename(__FILE__) ) . '/languages/' );
+    }
 
 	// Display dropdown
 	public function product_filter_in_order(){
@@ -115,3 +117,4 @@ class FOA_Woo_Filter_Orders_by_Product{
 	}
 }
 
+FOA_Woo_Filter_Orders_by_Product::instance();
